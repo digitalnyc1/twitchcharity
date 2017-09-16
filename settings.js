@@ -1,0 +1,5 @@
+﻿var settings = {
+  "Enabled": true,
+  "Command": "!twitchcharity",
+  "Format": "Latest Twitch #Charity update: {}"
+};

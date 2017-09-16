@@ -1,0 +1,25 @@
+﻿{
+  "output_file": "settings.json",
+  "Enabled": {
+    "type": "checkbox",
+    "value": true,
+    "label": "Command enabled",
+    "tooltip": "Enabled/disable the bot command to show the last Twitch #charity donation message",
+	"group": "General"
+  },
+  "Command": {
+    "type": "textbox",
+    "value": "!twitchcharity",
+	"label": "Command Name",
+    "tooltip": "Command that will show the last Twitch #charity donation message",
+	"group": "General"
+  },
+  "Format": {
+    "type": "textbox",
+    "value": "Latest Twitch #Charity update: {}",
+	"label": "Message Format",
+    "tooltip": "Format of the message the bot sends along with the latest Twitch #chartiy donation message",
+	"group": "General"
+  }
+
+}
