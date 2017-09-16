@@ -61,14 +61,14 @@ def Execute(data):
 	match = re.search(r'msg-id=charity;.*(?<=system-msg=)(.*?)(?=;)', data.RawData)
 	if match:
 		message = re.sub(r"\\s", ' ', match.group(1))
-		with codecs.open(messageFile, encoding='utf-8-sig',mode='w+') as f:
-			f.write(message)
+		if message:
+			with codecs.open(messageFile, encoding='utf-8-sig',mode='w+') as f:
+				f.write(message)
 	if MySettings.Enabled and data.IsChatMessage() and data.GetParam(0).lower() == MySettings.Command:
 		if os.path.isfile(messageFile):
 			with codecs.open(messageFile, encoding='utf-8-sig',mode='r') as f:
 				message = f.read()
 				Parent.SendTwitchMessage(MySettings.Format.format(message))
-		return
 	return
 	
 def Tick():
